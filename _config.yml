@@ -5,12 +5,22 @@ baseurl: ""
 style_baseurl: ""
 url: "http://music-encoding.org" # the base hostname & protocol for your site
 twitter_username: music-encoding
+repository: musicEnfanthen/music-encoding.github.io
 
 # Build settings
 markdown: kramdown
 
+# Plugins
 plugins:
   - jekyll-redirect-from
+  - jekyll/scholar
+
+scholar:
+    source: ./resources
+    bibliography: mei_bibliography_SCHOLAR.bib
+    use_raw_bibtex_entry: true
+    group_by: year
+    group_order: descending
 
 menu:
     - id: about
